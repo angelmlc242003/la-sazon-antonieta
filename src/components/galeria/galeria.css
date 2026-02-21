@@ -1,0 +1,244 @@
+/* =========================================
+   SECCIÓN GALERÍA - VERSIÓN PREMIUM ✦
+   ========================================= */
+
+.carousel-section {
+  padding: 6rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; /* Evita que los iconos flotantes causen scroll horizontal */
+}
+
+.decorative-element {
+  position: absolute;
+  font-size: clamp(3rem, 8vw, 6rem);
+  opacity: 0.06;
+  animation: float 8s ease-in-out infinite;
+}
+
+.decorative-element:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.decorative-element:nth-child(2) { top: 60%; right: 5%; animation-delay: 2s; }
+.decorative-element:nth-child(3) { bottom: 5%; left: 15%; animation-delay: 4s; }
+
+/* --- Títulos Premium --- */
+.carousel-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+}
+
+.carousel-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--red) 50%, var(--terracotta, #C1666B) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 8px rgba(242, 141, 82, 0.2));
+}
+
+/* Destellos a los lados del título */
+.carousel-title::before,
+.carousel-title::after {
+  content: '✦';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  font-size: 2rem;
+  opacity: 0.6;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.carousel-title::before { left: -3.5rem; }
+.carousel-title::after { right: -3.5rem; animation-delay: 1s; }
+
+.carousel-subtitle {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* --- Estructura del Carrusel (Marcos y Sombras) --- */
+.carousel-container {
+  position: relative;
+  max-width: 850px; /* Un poco más ancho para lucir el diseño */
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255,255,255,1), rgba(255, 248, 240, 0.8));
+  border-radius: 45px;
+  box-shadow: 
+    0 30px 90px rgba(0, 0, 0, 0.12),
+    0 15px 40px rgba(242, 141, 82, 0.08);
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background-color: var(--cream);
+  /* Doble borde Premium */
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.2),
+    0 0 0 8px var(--cream),
+    0 0 0 14px var(--primary),
+    0 0 0 16px rgba(242, 141, 82, 0.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Slides --- */
+.carousel-slide {
+  min-width: 100%;
+  aspect-ratio: 6 / 5.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide:hover .carousel-image {
+  transform: scale(1.05); /* Efecto zoom suave al pasar el mouse */
+}
+
+/* --- Contador --- */
+.carousel-counter {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: rgba(45, 27, 14, 0.85);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 700;
+  z-index: 12;
+  font-size: 0.9rem;
+  border: 2px solid rgba(242, 141, 82, 0.3);
+}
+
+.carousel-counter .current {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* --- Botones --- */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, var(--primary), var(--red));
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(226, 74, 54, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 25px rgba(226, 74, 54, 0.4);
+}
+
+.carousel-button-prev { left: 20px; }
+.carousel-button-next { right: 20px; }
+
+/* --- Indicadores (Dots) Premium --- */
+.carousel-indicators-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.2rem 2.5rem;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(242, 141, 82, 0.1);
+}
+
+.carousel-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(242, 141, 82, 0.2);
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-dot.active {
+  width: 45px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--red));
+  border-color: var(--red);
+  box-shadow: 0 5px 15px rgba(242, 141, 82, 0.4);
+}
+
+/* --- Animaciones --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateY(-50%) scale(1); opacity: 0.6; }
+  50% { transform: translateY(-50%) scale(1.2); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .carousel-wrapper { padding: 1.2rem; }
+  .carousel-title::before, .carousel-title::after { display: none; }
+  
+  .carousel {
+    box-shadow: 
+      0 15px 40px rgba(0,0,0,0.15),
+      0 0 0 6px var(--cream),
+      0 0 0 10px var(--primary);
+  }
+
+  .carousel-button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}

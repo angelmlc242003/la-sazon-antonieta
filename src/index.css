@@ -1,0 +1,63 @@
+/* src/index.css - estilos globales y variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #F28D52;
+  --red: #E63946;
+  --yellow: #F9C74F;
+  --cream: #FFF8F0;
+  --warm-bg: #FFF5E6;
+  --dark: #2D1B0E;
+  --terracotta: #C1666B;
+
+    /* Tipografías */
+  --font-title: 'Bebas Neue', 'Arial Black', Impact, sans-serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-hand: 'Caveat', 'Brush Script MT', cursive, sans-serif;
+
+}
+
+/* Fondo global cálido, sin tonos verdes */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--dark);
+  background: var(--warm-bg);
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(249,199,79,0.14) 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(226,95,80,0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(242,141,82,0.06) 0%, transparent 70%),
+    linear-gradient(180deg, #FFF8F2 0%, #FFF1DF 100%);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Textura sutil sobre todo el body (opcional) */
+.texture-overlay {
+  position: fixed;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(242,141,82,0.02) 10px, rgba(242,141,82,0.02) 20px),
+    repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(230,57,70,0.02) 10px, rgba(230,57,70,0.02) 20px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

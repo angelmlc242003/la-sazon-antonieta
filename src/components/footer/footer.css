@@ -1,0 +1,128 @@
+footer {
+  background: linear-gradient(135deg, var(--dark) 0%, #1a0f08 100%);
+  color: var(--cream);
+  padding: 4rem 5% 2rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--red),
+    var(--yellow),
+    var(--green),
+    var(--primary)
+  );
+  background-size: 200% 100%;
+  animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+footer::after {
+  content: "🌮";
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 15rem;
+  opacity: 0.03;
+  transform: rotate(-15deg);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.footer-about h3 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-about p {
+  line-height: 1.8;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.footer-links h4 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  color: var(--cream);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  position: relative;
+  padding-left: 20px;
+}
+
+.footer-links a::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 2px solid rgba(242, 141, 82, 0.3);
+  opacity: 0.7;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

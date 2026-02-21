@@ -1,0 +1,167 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= FEATURES / ESENCIA ================= */
+
+.features {
+  padding: 6rem 5%;
+  /* ⛔ background eliminado → hereda el global */
+  position: relative;
+  z-index: 1; /* suficiente, no necesita 2 */
+  overflow: hidden;
+}
+
+/* ⛔ decorativos eliminados (van al css global si se reutilizan) */
+.features::before,
+.features::after {
+  content: none;
+}
+
+/* ================= TITLES ================= */
+
+.section-title {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: var(--dark);
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+/* ================= GRID ================= */
+
+.features-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+/* ================= CARD ================= */
+
+.feature-card {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid transparent;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--red),
+    var(--yellow)
+  );
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(242, 141, 82, 0.2);
+  border-color: var(--primary);
+}
+
+/* ================= ICON ================= */
+
+.feature-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  font-size: 3rem;
+}
+
+/* SVG en blanco */
+.feature-icon img,
+.feature-icon svg {
+  width: 42px;
+  height: 42px;
+  stroke: rgb(54, 49, 49);
+  fill: none;
+}
+
+/* === Colores ORIGINALES === */
+
+.feature-card:nth-child(1) .feature-icon {
+  background: linear-gradient(135deg, var(--primary), var(--red));
+  box-shadow: 0 8px 20px rgba(249, 199, 79, 0.35);
+}
+
+.feature-card:nth-child(2) .feature-icon {
+  background: linear-gradient(135deg, var(--primary), var(--red));
+  box-shadow: 0 8px 20px rgba(249, 199, 79, 0.35);
+}
+
+.feature-card:nth-child(3) .feature-icon {
+  background: linear-gradient(135deg, var(--primary), var(--red));
+  box-shadow: 0 8px 20px rgba(249, 199, 79, 0.35);
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.15) rotate(10deg);
+}
+
+/* ================= TEXT ================= */
+
+.feature-card h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  letter-spacing: 1px;
+}
+
+.feature-card p {
+  line-height: 1.7;
+  color: var(--dark);
+  opacity: 0.8;
+  font-weight: 500;
+}
