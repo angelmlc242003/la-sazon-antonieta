@@ -1,6 +1,6 @@
 // src/components/contacto/contacto.jsx
 import React, { useState, useEffect } from "react";
-import "./Contacto.css";
+import "./contacto.css";
 
 import MailIcon from "../../assets/icons/mail.svg?react";
 import PhoneIcon from "../../assets/icons/phone.svg?react";
