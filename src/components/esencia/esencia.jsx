@@ -1,4 +1,4 @@
-import './Esencia.css';
+import './esencia.css';
 
 import PepperIcon from '../../assets/icons/pepper.svg?react';
 import IngredientIcon from '../../assets/icons/ingredient.svg?react';

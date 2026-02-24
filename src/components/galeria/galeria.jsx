@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./Galeria.css";
+import "./galeria.css";
 
 const Galeria = () => {
   const trackRef = useRef(null);

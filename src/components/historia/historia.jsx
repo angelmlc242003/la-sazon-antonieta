@@ -1,4 +1,4 @@
-import "./Historia.css";
+import "./historia.css";
 import logoHistoria from "../../assets/img/logo_historia.png";
 
 const Historia = () => {

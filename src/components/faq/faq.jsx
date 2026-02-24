@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./FAQ.css";
+import "./faq.css";
 
 import WatchIcon from "../../assets/icons/watch.svg?react";
 import PhoneIcon from "../../assets/icons/phone.svg?react";
