@@ -15,9 +15,10 @@ export default function Navbar() {
 
       <ul className="nav-links">
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
+        <li><a href="#esencia">Esencia</a></li>
         <li><a href="#historia">Historia</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#galeria">Galería</a></li>
       </ul>
     </nav>
   );

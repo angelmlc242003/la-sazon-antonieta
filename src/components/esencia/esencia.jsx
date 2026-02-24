@@ -6,7 +6,7 @@ import LoveIcon from '../../assets/icons/love.svg?react';
 
 export default function Esencia() {
   return (
-    <section className="features" id="productos">
+    <section className="features" id="esencia">
       <h2 className="section-title">Nuestra Esencia</h2>
       <p className="section-subtitle">~ Lo que nos hace especiales ~</p>
 

@@ -18,16 +18,13 @@ const Footer = () => {
           <h4>Enlaces</h4>
           <ul>
             <li>
-              <a href="#productos">Nuestros Productos</a>
+              <a href="#esencia">Nuestra Esencia</a>
             </li>
             <li>
               <a href="#historia">Nuestra Historia</a>
             </li>
             <li>
-              <a href="#recetas">Recetas Tradicionales</a>
-            </li>
-            <li>
-              <a href="#tienda">Tienda en Línea</a>
+              <a href="#galeria">Conoce nuestro ambiente</a>
             </li>
           </ul>
         </div>
@@ -36,16 +33,14 @@ const Footer = () => {
           <h4>Contacto</h4>
           <ul>
             <li>
-              <a href="mailto:info@lasazondeantonieta.com">Email</a>
+              <a href="mailto:elsazondeantonietaoficial@gmail.com">Email</a>
             </li>
             <li>
-              <a href="tel:+52">Teléfono</a>
+              <a href="tel:+5215545070572" aria-label="Llamar al +52 1 55 4507 0572">
+              Teléfono</a>
             </li>
             <li>
-              <a href="#">Instagram</a>
-            </li>
-            <li>
-              <a href="#">Facebook</a>
+              <a href="https://www.facebook.com/profile.php?id=61570140658443">Facebook</a>
             </li>
           </ul>
         </div>

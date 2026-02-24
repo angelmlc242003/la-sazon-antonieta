@@ -14,9 +14,8 @@ const faqs = [
     question: "¿Cuáles son sus horarios de atención?",
     answer: (
       <>
-        Estamos abiertos de <strong>lunes a sábado de 9:00 AM a 6:00 PM</strong>.
-        Los domingos descansamos para que la abuela Antonieta pueda pasar tiempo
-        con la familia. Te recomendamos hacer tu pedido con anticipación.
+        Estamos abiertos de <strong>lunes a domingo</strong>.
+        Incluso los domingos, mamá Antonieta hace todo lo posible por dejar el corazón en cada uno de sus platillos. Te recomendamos hacer tu pedido con anticipación.
       </>
     ),
   },
@@ -24,14 +23,44 @@ const faqs = [
     icon: PhoneIcon,
     question: "¿Cómo puedo hacer un pedido?",
     answer: (
-      <>
-        Puedes hacer tu pedido de tres formas:
-        <ul>
-          <li><strong>Teléfono:</strong> (55) 1234-5678</li>
-          <li><strong>WhatsApp:</strong> Mensaje directo</li>
-          <li><strong>Facebook:</strong> Inbox</li>
-        </ul>
-      </>
+<>
+  Puedes hacer tu pedido de tres formas:
+  <ul>
+    <li>
+      <strong>Teléfono:</strong>{' '}
+      <a
+        href="tel:+5215545070572"
+        aria-label="Llamar al +52 1 55 4507 0572"
+      >
+        +52 1 55 4507 0572
+      </a>
+    </li>
+
+    <li>
+      <strong>WhatsApp:</strong>{' '}
+      <a
+        href="https://wa.me/5215545070572"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Enviar mensaje por WhatsApp al +52 1 55 4507 0572"
+      >
+        Mensaje directo
+      </a>
+    </li>
+
+    <li>
+      <strong>Facebook:</strong>{' '}
+      <a
+        href="https://www.facebook.com/profile.php?id=61570140658443"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ir al perfil de Facebook"
+      >
+        Inbox
+      </a>
+    </li>
+  </ul>
+</>
     ),
   },
   {
@@ -39,8 +68,7 @@ const faqs = [
     question: "¿Hacen entregas a domicilio?",
     answer: (
       <>
-        Sí, hacemos entregas a domicilio en <strong>zonas cercanas</strong>.
-        También puedes recoger tu pedido en el local sin costo adicional.
+        Sí, hacemos entregas a domicilio en <strong>toda CDMX</strong>.
       </>
     ),
   },
@@ -51,7 +79,6 @@ const faqs = [
       <ul>
         <li><strong>Efectivo</strong></li>
         <li><strong>Transferencia bancaria</strong></li>
-        <li><strong>Tarjeta</strong> en local</li>
       </ul>
     ),
   },

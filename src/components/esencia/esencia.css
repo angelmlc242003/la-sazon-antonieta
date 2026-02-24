@@ -13,13 +13,11 @@
 
 .features {
   padding: 6rem 5%;
-  /* ⛔ background eliminado → hereda el global */
   position: relative;
-  z-index: 1; /* suficiente, no necesita 2 */
+  z-index: 1; 
   overflow: hidden;
 }
 
-/* ⛔ decorativos eliminados (van al css global si se reutilizan) */
 .features::before,
 .features::after {
   content: none;
@@ -119,7 +117,6 @@
   font-size: 3rem;
 }
 
-/* SVG en blanco */
 .feature-icon img,
 .feature-icon svg {
   width: 42px;

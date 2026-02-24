@@ -118,6 +118,12 @@
   box-shadow: 0 6px 20px rgba(242,141,82,0.4);
 }
 
+.contact-info-details .phone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
 .contact-info-details h4 {
   font-size: 1.1rem;
   font-weight: 700;
