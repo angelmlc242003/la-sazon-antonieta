@@ -97,8 +97,6 @@ export default function Contacto() {
         token,
       };
 
-      console.log("Enviando a function payload:", payload);
-
       const res = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -240,7 +238,7 @@ export default function Contacto() {
             <div className="phone-list">
         <a
         className="phone-link"
-        href="https://wa.me/+5215580650015"
+        href="https://wa.me/5215580650015"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chatear en WhatsApp con +52 1 (55) 1234-5678">
